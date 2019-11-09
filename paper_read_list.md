@@ -16,6 +16,7 @@ ref：https://mp.weixin.qq.com/s?__biz=MzAwNjM1ODkxNQ==&mid=2650891073&idx=1&sn=
 ### 1《End-To-End Memory Networks》
 ![模型框架图](https://raw.githubusercontent.com/bigheary/markdown_pics/master/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-11-09%20%E4%B8%8B%E5%8D%8812.48.27.png)
 从模型结构上看，通过多个hop结构进行stack，最后得到一个输出结果做classify，每个hop的处理完成了将输入的query(u)，memory转化成一个output(o), 并且通过一个combine(u, o) 形成下一个hop的input，经过固定次数hop最后输出。
+memory体现在哪里，应该不仅仅是类似lstm的机制，如何适应kb的？
 #### 总结
 - 每个hop的memory形成通过embedding的方式，output也是通过embedding方式，结合成o的过程类似attention机制；
 - 多个hop间的embedding可以共享，也可以不共享。
