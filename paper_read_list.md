@@ -25,7 +25,7 @@ memory体现在哪里，应该不仅仅是类似lstm的机制，如何适应kb�
 - 应用在qa，nnlm，没详细研究，主要了解下结构及multi-hop概念；
 
 
-2 《Pointer Networks》
+###2 《Pointer Networks》
 https://zhuanlan.zhihu.com/p/48959800
 ![pointer network](https://github.com/bigheary/markdown_pics/blob/master/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-11-09%20%E4%B8%8B%E5%8D%885.50.31.png)
 - 巧妙利用attention机制计算出来的权重，直接将其作为decoder输出或者输出端的成分。
