@@ -19,10 +19,12 @@ ref：https://mp.weixin.qq.com/s?__biz=MzAwNjM1ODkxNQ==&mid=2650891073&idx=1&sn=
 memory体现在哪里，应该不仅仅是类似lstm的机制，如何适应kb的？
 #### 总结
 - 每个hop的memory形成通过embedding的方式，output也是通过embedding方式，结合成o的过程类似attention机制；
+- memory的具体表现形式，参考下tf代码，有点疑惑，是固定尺寸吗？这里的memory实际上每一个的意思是将每个句子压缩成一个向量存储起来，那么有这个memory随着梯度更新，需要随之更新吗？
 - 多个hop间的embedding可以共享，也可以不共享。
 - 结构类似后面出现的transformer（尤其是还使用了positional encoding，pe）；
 - 和rnn的关系，好像没法完全对应上，没有step的概念，好像不适用于2seq；
 - 应用在qa，nnlm，没详细研究，主要了解下结构及multi-hop概念；
+有参考的git代码：https://zhuanlan.zhihu.com/p/29679742
 
 
 ### 2 《Pointer Networks》
