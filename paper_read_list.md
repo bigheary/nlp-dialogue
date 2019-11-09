@@ -31,3 +31,7 @@ https://zhuanlan.zhihu.com/p/48959800
 - 巧妙利用attention机制计算出来的权重，直接将其作为decoder输出或者输出端的成分。
 - 在摘要里面应用较多，由于attention权重指示了输入中哪些部分比较重要，可以直接将比较重要的输入值copy到输出端，并且可以摆脱词汇表大小的限制。
 非常巧妙的想法，而且不涉及复杂的架构设计。
+- 后续有在摘要领域应用pointer network的工作，包括：
+  - 《Get To The Point: Summarization with Pointer-Generator Networks》
+  - 《Multi-Source Pointer Network for Product Title Summarization》
+  - 《Incorporating Copying Mechanism in Sequence-to-Sequence Learning》 华为和港大合作
