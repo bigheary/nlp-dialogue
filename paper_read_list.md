@@ -16,7 +16,7 @@ ref：https://mp.weixin.qq.com/s?__biz=MzAwNjM1ODkxNQ==&mid=2650891073&idx=1&sn=
 ### 1《End-To-End Memory Networks》
 ![模型框架图](https://raw.githubusercontent.com/bigheary/markdown_pics/master/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-11-09%20%E4%B8%8B%E5%8D%8812.48.27.png)
 从模型结构上看，通过多个hop结构进行stack，最后得到一个输出结果做classify，每个hop的处理完成了将输入的query(u)，memory转化成一个output(o), 并且通过一个combine(u, o) 形成下一个hop的input，经过固定次数hop最后输出。
-memory体现在哪里，应该不仅仅是类似lstm的机制，如何适应kb的？
+memory体现在哪里，应该不仅仅是类似lstm的机制，如何适应kb的？从结构上看，好像只支持预测出一个word，如何实现答案是多个word的情况呢？
 #### 总结
 - 每个hop的memory形成通过embedding的方式，output也是通过embedding方式，结合成o的过程类似attention机制；
 - memory的具体表现形式，参考下tf代码，有点疑惑，是固定尺寸吗？这里的memory实际上每一个的意思是将每个句子压缩成一个向量存储起来，那么有这个memory随着梯度更新，需要随之更新吗？
