@@ -14,4 +14,11 @@ h) On the properties of neural machinetranslation: Encoder-decoder approaches.
 
 关于mem-network中的hop概念
 《End-To-End Memory Networks》
-![](End-To-End Memory Networks)
+![模型框架图](https://raw.githubusercontent.com/bigheary/markdown_pics/master/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-11-09%20%E4%B8%8B%E5%8D%8812.48.27.png)
+从模型结构上看，通过多个hop结构进行stack，最后得到一个输出结果做classify，每个hop的处理完成了将输入的query(u)，memory转化成一个output(o), 并且通过一个combine(u, o) 形成下一个hop的input，经过固定次数hop最后输出。
+总结：
+1）每个hop的memory形成通过embedding的方式，output也是通过embedding方式，结合成o的过程类似attention机制；
+2）多个hop间的embedding可以共享，也可以不共享。
+3）结构类似后面出现的transformer（尤其是还使用了positional encoding，pe）；
+4）和rnn的关系，好像没法完全对应上，没有step的概念，好像不适用于2seq；
+4）应用在qa，nnlm，没详细研究，主要了解下结构及multi-hop概念；
