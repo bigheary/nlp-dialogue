@@ -11,3 +11,7 @@ e) End-to-endmemory networks.
 f) Neural responding machinefor short-text conversation
 g) A neural conversational model.
 h) On the properties of neural machinetranslation: Encoder-decoder approaches.
+
+关于mem-network中的hop概念
+《End-To-End Memory Networks》
+![](End-To-End Memory Networks)
