@@ -23,3 +23,11 @@ memory体现在哪里，应该不仅仅是类似lstm的机制，如何适应kb�
 - 结构类似后面出现的transformer（尤其是还使用了positional encoding，pe）；
 - 和rnn的关系，好像没法完全对应上，没有step的概念，好像不适用于2seq；
 - 应用在qa，nnlm，没详细研究，主要了解下结构及multi-hop概念；
+
+
+2 《Pointer Networks》
+https://zhuanlan.zhihu.com/p/48959800
+[pointer network](https://github.com/bigheary/markdown_pics/blob/master/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-11-09%20%E4%B8%8B%E5%8D%885.50.31.png)
+巧妙利用attention机制计算出来的权重，直接将其作为decoder输出或者输出端的成分。
+在摘要里面应用较多，由于attention权重指示了输入中哪些部分比较重要，可以直接将比较重要的输入值copy到输出端，并且可以摆脱词汇表大小的限制。
+非常巧妙的想法，而且不涉及复杂的架构设计。
