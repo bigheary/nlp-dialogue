@@ -37,3 +37,6 @@ https://zhuanlan.zhihu.com/p/48959800
   - 《Get To The Point: Summarization with Pointer-Generator Networks》
   - 《Multi-Source Pointer Network for Product Title Summarization》
   - 《Incorporating Copying Mechanism in Sequence-to-Sequence Learning》 华为和港大合作
+
+
+ref: https://akeeper.space/blog/645.html
